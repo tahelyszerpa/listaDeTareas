@@ -46,13 +46,14 @@ addBtn.addEventListener("click", (e) => {
 
 function mostrarHTML() {
     tareas.forEach((item) => {
-        let totalTareas = tareas.length;
 
+        const items = document.querySelectorAll("li");
+        let totalT = items.length;
         let tareasCompletas = cont
         console.log('El valor es: ', tareasCompletas)
 
 
-        total.textContent = `Total tareas: ${totalTareas}`;
+        total.textContent = `Total tareas: ${totalT}`;
 
     }
     )
@@ -66,15 +67,9 @@ function addDeleteBtn() {
     deleteBtn.addEventListener("click", (e) => {
         const item = e.target.parentElement;
         ul.removeChild(item);
-        if (tareas.tarea == item.textContent) {
-            tareas.forEach(function (item) {
-                tareas.filter((a) => a !== item.textContent)
-
-            })
-        }
 
         const items = document.querySelectorAll("li");
-
+        mostrarHTML();
         if (items.length === 0) {
             empty.style.display = "block";
         }
@@ -106,6 +101,9 @@ function addCheckBtn() {
         completadas.textContent = `Tareas Completadas: ${cont}`;
 
     });
+
+    const items = document.querySelectorAll("li");
+    mostrarHTML();
     return checkBtn;
 };
 
