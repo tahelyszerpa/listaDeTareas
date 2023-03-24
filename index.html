@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewsport" content="width=device-width,initial-scale=1.0">
+        <title>Lista de Tareas</title>
+        <link rel="stylesheet" href="src/css/style.css">
+
+    </head>
+    <body>
+        <div class="Fecha" id="fecha"> </div>
+        <h1>Lista de Tareas</h1>
+        <div class="datos">
+            <p id="total">Total tareas: 0</p>
+            <p id="completadas">Tareas Completadas: 0</p>
+        </div>
+
+        <div class="container">
+
+            <div class="tareaList">
+                <form>
+                    <input type="text" placeholder="Agregar una Tarea...">
+                    <button type="button" class="btn-add">+</button>
+                </form>
+            </div>
+
+
+        </div>
+        <div class="containerTareas">
+            <div class="empty">
+                <p>No hay tareas para mostrar...</p>
+
+            </div>
+            <div class="li-container">
+                <ul></ul>
+            </div>
+        </div>
+        <script src="src/js/main.js"></script>
+    </body>
+</html>
